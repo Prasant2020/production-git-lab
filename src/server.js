@@ -23,6 +23,15 @@ app.get('/health', (req, res) => {
     });
 });
 
+// Application information
+app.get('/api/info', (req, res) => {
+    res.json({
+        application: 'Employee Management System',
+        version: '1.0.0',
+        developer: 'Developer A'
+    });
+});
+
 app.listen(PORT, '0.0.0.0', () => {
     console.log(`Server running on port ${PORT}`);
 });
