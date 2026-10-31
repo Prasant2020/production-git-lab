@@ -3,7 +3,11 @@ const express = require('express');
 
 const app = express();
 
+const employeeRoutes = require('./employees');
+
 app.use(express.json());
+
+app.use('/api/employees', employeeRoutes);
 
 const PORT = 3000;
 
