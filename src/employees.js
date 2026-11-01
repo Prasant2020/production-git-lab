@@ -93,4 +93,7 @@ router.delete('/:id', (req, res) => {
     });
 });
 
+// Export employee data for other application modules
+router.getEmployees = () => employees;
+
 module.exports = router;

@@ -5,9 +5,13 @@ const app = express();
 
 const employeeRoutes = require('./employees');
 
+const dashboardRoutes = require('./dashboard');
+
 app.use(express.json());
 
 app.use('/api/employees', employeeRoutes);
+
+app.use('/api/dashboard', dashboardRoutes);
 
 const PORT = 3000;
 
